@@ -18,6 +18,8 @@ COPY . /devdocs
 
 RUN thor docs:download --all && \
     thor docs:generate vertx --force && \
+    thor docs:generate vertx~4.5.15 --force && \
+    thor docs:generate vertx~3.9.16 --force && \
     thor assets:compile && \
     rm -rf /tmp
 
